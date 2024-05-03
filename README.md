@@ -10,7 +10,7 @@ This is an ongoing collection of commands used by threat actors to perform vario
 
 System Information Discovery [[T1082](https://attack.mitre.org/techniques/T1082/)]
 
-```visualbasic
+```lang-default
 systeminfo
 net config workstation
 tasklist /svc
