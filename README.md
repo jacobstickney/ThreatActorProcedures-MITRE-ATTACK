@@ -469,17 +469,3 @@ netsh advfirewall set currentprofile state off
 netsh interface portproxy add v4tov4 listenaddress=<ip_address> listenport=<listening_port> connectaddress=<internal_ip_address> connectport=<connect_port> protocol=tcp”
 netsh advfirewall firewall add rule dir=in name="<name>" program=<file_path> service=rpcss action=allow protocol=TCP localport=<port>
 ```
-
----
-
-**References**:
-
-1. Kaspersky. (2023). *Modern Asian APT Groups: Tactics, Techniques and Procedures*.
-2. *Technical documentation*. Microsoft Learn. https://learn.microsoft.com/en-us/docs 
-3. *The DFIR report*. (2024, April 29). The DFIR Report. https://thedfirreport.com/ 
-4. *ImagePath – Penetration testing lab*. (2020, January 22). Penetration Testing Lab. https://pentestlab.blog/tag/imagepath/ 
-5. *#StopRansomware: Akira Ransomware | CISA.* (2024, April 18) . https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a 
-6. *#StopRansomware: Phobos Ransomware | CISA*. (2024, February 29). Cybersecurity and Infrastructure Security Agency CISA. https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-060a 
-7. MaNikhilHo. (2023, October 5). Everybody LOLs, sometimes. - MaNikhilHo - Medium. *Medium*. https://medium.com/@realnikhiljyapu/everybody-lols-sometimes-1a5e4a49e898 
-8. Reaves, J. (2021, September 2). *Sarwent malware continues to evolve with updated command functions - SentinelLabs*. SentinelOne. https://www.sentinelone.com/labs/sarwent-malware-continues-to-evolve-with-updated-command-functions/ 
-9. Black Hills Information Security. (2024, February 8). *Domain Goodness – How I learned to LOVE AD Explorer*. Black Hills Information Security. https://www.blackhillsinfosec.com/domain-goodness-learned-love-ad-explorer/
