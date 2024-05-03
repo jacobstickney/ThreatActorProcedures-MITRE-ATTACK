@@ -8,7 +8,7 @@ This is an ongoing collection of commands used by threat actors to perform vario
 
 ---
 
-System Information Discovery [^[T1082](https://attack.mitre.org/techniques/T1082/)]
+System Information Discovery [[T1082](https://attack.mitre.org/techniques/T1082/)]
 
 ```
 systeminfo
