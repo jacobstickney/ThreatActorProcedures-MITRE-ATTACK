@@ -6,7 +6,7 @@ These behaviors are specific procedural implementations of broader techniques th
 
 This is an ongoing collection of commands used by threat actors to perform various actions on a compromised system, accompanied by their respective MITRE ATT&CK technique reference numbers.
 
-
+---
 
 System Information Discovery [[T1082](https://attack.mitre.org/techniques/T1082/)]
 
