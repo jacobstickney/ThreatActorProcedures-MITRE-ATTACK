@@ -189,6 +189,13 @@ net user /domain
 net user <username> /domain
 ```
 
+Event Triggered Execution: Image File Execution Options Injection [[T1546.012](https://attack.mitre.org/techniques/T1546/012/)]
+
+```
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\<target_file>.exe" /v Debugger /d "<threat_actor_file>.<ext>"
+```
+
+
 Lateral Tool Transfer via SMB [[T1570](https://attack.mitre.org/techniques/T1570/)]
 
 ```
