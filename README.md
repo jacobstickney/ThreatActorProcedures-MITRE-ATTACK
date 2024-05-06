@@ -365,7 +365,7 @@ sc.exe \\TARGET start <service_name>
 
 Credentials from Password Stores: Credentials from Web Browsers [[T1555.003](https://attack.mitre.org/techniques/T1555/003/)]
 
-```visual-basic
+```
 cmd.exe /Q /c esentutl.exe /y
 ```
 
