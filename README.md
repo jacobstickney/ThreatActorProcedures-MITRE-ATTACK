@@ -31,6 +31,7 @@ netsh portproxy show v4tov4
 reg query hklm\software\
 ```
 
+
 System Network Connections Discovery [[T1049](https://attack.mitre.org/techniques/T1049/)]
 
 ```
