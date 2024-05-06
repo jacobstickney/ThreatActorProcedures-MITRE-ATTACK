@@ -269,6 +269,7 @@ Scheduled Task/Job: Scheduled Task [[T1053.005](https://attack.mitre.org/techniq
 
 ```
 schtasks /s <remote_host> /tn one /u <domain>\<username> /p <password> /create /ru system /sc
+schtasks /create -s <remote> /tn <task_name> /tr <path_to_executable> /sc <schedule_type> /st <start_time>
 ```
 
 Indicator Removal: Clear Persistence [[T1070.009](https://attack.mitre.org/techniques/T1070/009/)]
