@@ -470,3 +470,9 @@ netsh advfirewall set currentprofile state off
 netsh interface portproxy add v4tov4 listenaddress=<ip_address> listenport=<listening_port> connectaddress=<internal_ip_address> connectport=<connect_port> protocol=tcp”
 netsh advfirewall firewall add rule dir=in name="<name>" program=<file_path> service=rpcss action=allow protocol=TCP localport=<port>
 ```
+
+Obfuscated Files or Information [[T1027](https://attack.mitre.org/techniques/T1027/)]
+
+```
+PowerShell.exe -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile -WindowStyle Hidden -EncodedCommand <Base64_encoded_string>
+```
