@@ -193,6 +193,7 @@ Event Triggered Execution: Image File Execution Options Injection [[T1546.012](h
 
 ```
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\<target_file>.exe" /v Debugger /d "<threat_actor_file>.<ext>"
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\<target_file>.exe" /v GlobalFlag /t REG_DWORD /d <GlobalFlag_registry entry_number>
 ```
 
 
