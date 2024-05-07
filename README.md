@@ -62,7 +62,6 @@ net localgroup "administrators" /dom
 net time /domain
 net share
 setspn.exe -F -Q */*
-setspn [-T REDACTED] -Q cifs/*
 dsquery group -name "<groupname>" | dsget group -members
 Get-MsolUser <user>
 Get-MsolUser -UserPrincipalName <user>
@@ -100,7 +99,7 @@ Query Registry [[T1012](https://attack.mitre.org/techniques/T1012/)]
 
 ```
 reg query
-hku\<domain_user_sid>\Software\Microsoft\Office\14.0\ Outlook /s | find "<victim_domain_name>"
+hkcu\<domain_user_sid>\Software\Microsoft\Office\14.0\ Outlook /s | find "<victim_domain_name>"
 cmd /c tasklist
 wmic process | find "<process_name>"
 ```
