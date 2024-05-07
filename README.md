@@ -66,7 +66,7 @@ dsquery group -name "<groupname>" | dsget group -members
 Get-MsolUser <user>
 Get-MsolUser -UserPrincipalName <user>
 adfind -gcb -sc trustdmp 
-adfind  f "(objectcategory=group)" 
+adfind f "(objectcategory=group)" 
 adfind -subnets -f (objectCategory=subnet)
 adfind -f (objectcategory=organizationalUnit) 
 adfind -f objectcategory=computer -csv name operatingSystem 
