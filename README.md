@@ -498,7 +498,7 @@ Inhibit System Recovery [[T1490](https://attack.mitre.org/techniques/T1490/)]
 
 ```
 wmic shadowcopy delete
-powershell.exe -Command "Get-WmiObject Win32_Shadowcopy | Remove-WmiObject
+powershell.exe -Command Get-WmiObject Win32_Shadowcopy | Remove-WmiObject
 vssadmine delete shadows /all /quiet
 bcdedit /set {default} recoveryenabled No
 bcdedit /set {default} bootstatuspolicy ignoreallfailures
