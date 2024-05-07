@@ -263,8 +263,8 @@ powershell.exe Uninstall-WindowsFeature -Name Windows-Defender-GUI
 Create or Modify System Process: Windows Service [[T1543.003](https://attack.mitre.org/techniques/T1543/003/)]
 
 ```
-sc <server> create <service_name> <option1> <option2>
-sc <server> config <service_name> binpath= “<path_to_executable>”
+sc <server_IP> create <service_name> <option1> <option2>
+sc <server_IP> config <service_name> binpath= “<path_to_executable>”
 sc <service_name> binpath= “<path_to_executable>”
 ```
 <br>
