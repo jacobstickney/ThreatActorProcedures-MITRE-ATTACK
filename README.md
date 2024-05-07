@@ -342,7 +342,8 @@ File and Directory Discovery [[T1083](https://attack.mitre.org/techniques/T1083/
 
 ```
 echo list volume | diskpart
-wmic /node:<REDACTED> /user:"<user>" /password:"<password>" logicaldisk get caption,description,drivetype,providername,volumename
+echo lis vol | diskpart
+wmic /node:<IP_address> /user:"<user>" /password:"<password>" logicaldisk get caption,description,drivetype,providername,volumename
 Get-CimInstance win32_logicaldisk
 ```
 <br>
