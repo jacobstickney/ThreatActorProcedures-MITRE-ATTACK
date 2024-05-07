@@ -452,7 +452,7 @@ Use Alternate Authentication Material: Pass the Hash [[T1550.002](https://attac
 Log Enumeration [[T1654](https://attack.mitre.org/techniques/T1654/)]
 
 ```
-get-eventlog security
+powershell.exe get-eventlog security
 powershell.exe -c "get-eventlog 'Security'
 ```
 <br>
