@@ -65,13 +65,13 @@ setspn.exe -F -Q */*
 dsquery group -name "<groupname>" | dsget group -members
 Get-MsolUser <user>
 Get-MsolUser -UserPrincipalName <user>
-adfind  -gcb -sc trustdmp 
-adfind  -f "(objectcategory=group)" 
-adfind  -subnets -f (objectCategory=subnet)
-adfind  -f (objectcategory=organizationalUnit) 
-adfind  -f objectcategory=computer -csv name operatingSystem 
-adfind  -f objectcategory=computer 
-adfind  -f (objectcategory=person)
+adfind -gcb -sc trustdmp 
+adfind  f "(objectcategory=group)" 
+adfind -subnets -f (objectCategory=subnet)
+adfind -f (objectcategory=organizationalUnit) 
+adfind -f objectcategory=computer -csv name operatingSystem 
+adfind -f objectcategory=computer 
+adfind -f (objectcategory=person)
 adexplorer -snapshot
 ```
 <br>
