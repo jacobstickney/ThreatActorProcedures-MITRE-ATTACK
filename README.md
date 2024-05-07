@@ -48,7 +48,7 @@ Account Discovery: Domain Account (Active Directory) [[T1087.002](https://attack
 
 ```
 net accounts /domain
-net user [REDACTED] /domain
+net user <user_name> /domain
 net user Administrator /domain
 nltest dclist:
 nltest /domain_trusts /all_trusts
