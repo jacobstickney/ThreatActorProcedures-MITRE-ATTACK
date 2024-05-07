@@ -475,6 +475,7 @@ Inter-Process Communication [[T1559](https://attack.mitre.org/techniques/T1559/)
 \MSSE-*
 \*-server
 ```
+* Cobalt Strike named pipes
 <br>
 
 Create Account: Local Account [[T1136.001](https://attack.mitre.org/techniques/T1136/001/)]
