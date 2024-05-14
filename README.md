@@ -474,6 +474,15 @@ Inter-Process Communication [[T1559](https://attack.mitre.org/techniques/T1559/)
 \msagent_*
 \MSSE-*
 \*-server
+\wkssvc*
+\DserNamePipe*
+\mojo.*
+\spoolss_*
+\srvsvc_*
+\win_svc*
+\ntsvcs*
+\winsock
+\UIA_PIPE
 ```
 * Cobalt Strike named pipes
 <br>
