@@ -310,6 +310,7 @@ Scheduled Task/Job: Scheduled Task [[T1053.005](https://attack.mitre.org/techniq
 ```
 schtasks /s <remote_host> /tn <task_name> /u <domain>\<username> /p <password> /create /ru system /sc
 schtasks /create -s <remote> /tn <task_name> /tr <path_to_executable> /sc <schedule_type> /st <start_time>
+schtasks /create /ru <user> /sc <service_name> /tn <task_name>
 ```
 <br>
 
