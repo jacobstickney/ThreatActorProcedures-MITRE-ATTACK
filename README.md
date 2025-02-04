@@ -257,6 +257,7 @@ REG ADD "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" /v "LocalSett
 REG ADD "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" /v "SubmitSamplesConsent" /t REG_DWORD /d 0x2 /f
 REG ADD "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\UX Configuration" /v "NotificationSuppress" /t REG_DWORD /d 0x1 /fe
 powershell.exe Uninstall-WindowsFeature -Name Windows-Defender-GUI
+wmic /node:"<IP_Address>" process call create "powershell Set-MpPreference -DisableRealtimeMonitoring $true"
 ```
 <br>
 
